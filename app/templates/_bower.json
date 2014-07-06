@@ -1,6 +1,42 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+    "name": "<%=bower_name%>",
+    "version": "<%=bower_version%>",
+    "title": "<%=bower_title%>",
+    "appPath": "app",
+    "description": "<%=bower_desc%>",
+    "keywords": [
+        "image",
+        "video",
+        "gallery"
+    ],
+    "homepage": "<%=bower_url%>",
+    "author": {
+        "name": "<%=full_name%>"
+    },
+    "repository": {
+        "type": "git",
+        "url": "<%=bower_repo%>"
+    },
+    "bugs": "<%=bower_bugs%>",
+    "dependencies": {
+        "jquery": ">=2.1.1"
+    },
+    "main": [
+        "app/css/<%=bower_name%>",
+        "app/img/sprites.gif",
+        "app/js/<%=bower_name%>"
+    ],
+    "ignore": [
+        "/*.*",
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "app/bower_components",
+        "test",
+        "tests"
+    ],
+    "authors": [
+        "<%=full_name%> <YOUR_MAIL@gmail.com>"
+    ],
+    "license": "MIT"
 }
-
