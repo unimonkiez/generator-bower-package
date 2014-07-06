@@ -1,15 +1,14 @@
 {
   "name": "generator-bower-package",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
+  "version": "0.0.1",
+  "description": "Yeoman Bower component project development generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "yuvalsaraf/generator-bower-package",
-  "author": {
-    "name": "",
-    "email": "",
-    "url": "https://github.com/yuvalsaraf"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuvalsaraf/generator-bower-package"
   },
+  "author": " (https://github.com/yuvalsaraf)",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -20,7 +19,9 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "bower",
+    "component"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
@@ -32,5 +33,12 @@
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/yuvalsaraf/generator-bower-package/issues"
+  },
+  "homepage": "https://github.com/yuvalsaraf/generator-bower-package",
+  "directories": {
+    "test": "test"
   }
 }
