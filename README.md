@@ -11,14 +11,14 @@ Also contains a simple and fast grunt server for developing.
 * **Instll the generator**
   Install 'bower package'
   ```shell
-  npm install -g bower package
+  npm install -g generator-bower-package
   ```
 * **Create a folder for developing**
   Create a folder for developing with your component name
 * **Run the generator**
   Run the generator
   ```shell
-  yo bower package
+  yo bower-package
   ```
 
 ## Usage
