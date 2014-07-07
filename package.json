@@ -1,6 +1,6 @@
 {
   "name": "generator-bower-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Yeoman Bower component project development generator",
   "license": "MIT",
   "main": "app/index.js",
@@ -21,7 +21,8 @@
   "keywords": [
     "yeoman-generator",
     "bower",
-    "component"
+    "component",
+    "package"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
