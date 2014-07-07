@@ -45,11 +45,11 @@ var BowerPackageGenerator = yeoman.generators.Base.extend({
         }, {
             name: 'bowerURL',
             message: 'Please enter your git reposotory url. \ncreate a git repo - has it required by any bower component \n(for exmaple - https://github.com/yuvalsaraf/real-gallery)',
-            default: this.config.get('context') ? this.config.get('context')['bower_url']
+            default: this.config.get('context') ? this.config.get('context')['bower_url'] : ''
         }, {
             name: 'fullName',
             message: 'What\'s your name? (for example - Yuval Saraf)',
-            default: this.config.get('context') ? this.config.get('context')['full_name']
+            default: this.config.get('context') ? this.config.get('context')['full_name'] : ''
         }];
 
         this.prompt(prompts, function(props) {
