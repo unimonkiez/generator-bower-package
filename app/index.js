@@ -37,7 +37,7 @@ var BowerPackageGenerator = yeoman.generators.Base.extend({
         }, {
             name: 'bowerDesc',
             message: 'What is your package description?',
-            default: this.config.get('context') ? this.config.get('context')['bower_desc'] : ''
+            default: this.config.get('context') ? this.config.get('context')['bower_desc'] : undefined
         }, {
             name: 'bowerVersion',
             message: 'Package\'s version?',
@@ -45,11 +45,11 @@ var BowerPackageGenerator = yeoman.generators.Base.extend({
         }, {
             name: 'bowerURL',
             message: 'Please enter your git reposotory url. \ncreate a git repo - has it required by any bower component \n(for exmaple - https://github.com/yuvalsaraf/real-gallery)',
-            default: this.config.get('context') ? this.config.get('context')['bower_url'] : ''
+            default: this.config.get('context') ? this.config.get('context')['bower_url'] : undefined
         }, {
             name: 'fullName',
             message: 'What\'s your name? (for example - Yuval Saraf)',
-            default: this.config.get('context') ? this.config.get('context')['full_name'] : ''
+            default: this.config.get('context') ? this.config.get('context')['full_name'] : undefined
         }];
 
         this.prompt(prompts, function(props) {
@@ -70,9 +70,9 @@ var BowerPackageGenerator = yeoman.generators.Base.extend({
         this.mkdir('app/js');
         this.mkdir('app/css');
         this.mkdir('app/img');
-        this.copy('_sprites.gif', 'app/img/sprites.gif');
-        this.copy('_js.js', 'app/js/' + this.bowerName + '.js');
-        this.copy('_css.css', 'app/css/' + this.bowerName + '.css');
+        this.copy('_sprites.gif', 'img/sprites.gif');
+        this.copy('_js.js', 'js/' + this.bowerName + '.js');
+        this.copy('_css.css', 'css/' + this.bowerName + '.css');
         this.copy('_Gruntfile.js', 'Gruntfile.js');
         this.copy('_.gitignore', '.gitignore');
     },

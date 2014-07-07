@@ -19,13 +19,13 @@ module.exports = function(grunt) {
                 tasks: ['bowerInstall']
             },
             js: {
-                files: ['<%= bowerApp.app %>/js/{,*/}*.js'],
+                files: ['js/{,*/}*.js'],
                 options: {
                     livereload: true
                 }
             },
             styles: {
-                files: ['<%= bowerApp.app %>/css/{,*/}*.css'],
+                files: ['css/{,*/}*.css'],
                 options: {
                     livereload: true
                 }
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     '<%= bowerApp.app %>/{,*/}*.html',
-                    '<%= bowerApp.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                    'img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
         },
@@ -49,26 +49,11 @@ module.exports = function(grunt) {
                 port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
                 hostname: 'localhost',
-                livereload: 35729,
-                base: '<%= bowerApp.app %>'
+                livereload: 35729
             },
             livereload: {
                 options: {
-                    open: 'http://localhost:<%= connect.options.port %>',
-                    base: [
-                        '.tmp',
-                        '<%= bowerApp.app %>'
-                    ],
-                    // MODIFIED: Add this middleware configuration
-                    middleware: function(connect, options) {
-                        var middlewares = [];
-
-                        middlewares.push(modRewrite(['^[^\\.]*$ /index.html [L]'])); //Matches everything that does not contain a '.' (period)
-                        options.base.forEach(function(base) {
-                            middlewares.push(connect.static(base));
-                        });
-                        return middlewares;
-                    }
+                    open: 'http://localhost:<%= connect.options.port %>/<%= bowerApp.app %>'
                 }
             }
 
