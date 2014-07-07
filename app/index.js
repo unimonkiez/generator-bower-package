@@ -33,23 +33,23 @@ var BowerPackageGenerator = yeoman.generators.Base.extend({
         var prompts = [{
             name: 'bowerTitle',
             message: 'What is your package\'s title?',
-            default: this.config.get('context')['bower_title'] || spacify(this.appname)
+            default: this.config.get('context') ? this.config.get('context')['bower_title'] : spacify(this.appname)
         }, {
             name: 'bowerDesc',
             message: 'What is your package description?',
-            default: this.config.get('context')['bower_desc']
+            default: this.config.get('context') ? this.config.get('context')['bower_desc'] : ''
         }, {
             name: 'bowerVersion',
             message: 'Package\'s version?',
-            default: this.config.get('context')['bower_version'] || '0.0.1'
+            default: this.config.get('context') ? this.config.get('context')['bower_version'] : '0.0.1'
         }, {
             name: 'bowerURL',
             message: 'Please enter your git reposotory url. \ncreate a git repo - has it required by any bower component \n(for exmaple - https://github.com/yuvalsaraf/real-gallery)',
-            default: this.config.get('context')['bower_url'] || '0.0.1'
+            default: this.config.get('context') ? this.config.get('context')['bower_url']
         }, {
             name: 'fullName',
             message: 'What\'s your name? (for example - Yuval Saraf)',
-            default: this.config.get('context')['full_name']
+            default: this.config.get('context') ? this.config.get('context')['full_name']
         }];
 
         this.prompt(prompts, function(props) {
